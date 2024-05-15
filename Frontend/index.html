@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header>
+        <div class="header-container">
+            <img src="cityLogo.jpeg" alt="City Logo" class="city-logo">
+            <div class="city-name">SMART CITY OF ATLANTIS</div>
+        </div>
+    </header>
+    <title>Pothole Complaints</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkDE7bJj6gVDS_MBorCFodGZA0AX9wQXM&callback=initMap" async defer></script>
+</head>
+<body>
+<div class="container mt-5">
+
+    <h2 class="text-center mb-5">POTHOLE COMPLAINT FORM</h2>
+    <div class="button-container">
+        <div class="form-label">Click on the map to automatically update the  location on the form</div>
+        <button type="button" class="btn btn-primary" id="getMyLocation">Get My Location</button>
+    </div>
+    <div class="map-container">
+        <div id="map"></div>
+    </div>
+</div>
+<div>
+    <form id="potHoleComplaintForm">
+
+        <div class="mb-3">
+            <label for="streetName" class="form-label">Street Name*</label>
+            <input type="text" class="form-control" id="streetName" required>
+        </div>
+        <div class="mb-3">
+            <label for="landmark" class="form-label">Landmark</label>
+            <input type="text" class="form-control" id="landmark">
+        </div>
+        <div class="mb-3">
+            <label for="longitude" class="form-label">Longitude*</label>
+            <input type="text" class="form-control" id="longitude" required>
+        </div>
+        <div class="mb-3">
+            <label for="latitude" class="form-label">Latitude*</label>
+            <input type="text" class="form-control" id="latitude" required>
+        </div>
+        <div class="mb-3">
+            <label for="comments" class="form-label">Comments</label>
+            <input type="text" class="form-control" id="comments">
+        </div>
+        <div class="mb-3">
+            <label for="additionalDocumentation" class="form-label">Pothole Photographs</label>
+            <input type="file" class="form-control" id="additionalDocumentation">
+        </div>
+        <div class="button-container">
+            <button type="submit" class="btn btn-primary">Submit Complaint</button>
+        </div>
+    </form>
+</div>
+
+<script src="script.js"></script>
+</body>
+<a href="allcomplaints.html" class="all-complaints-link">VIEW ALL OLD COMPLAINTS</a>
+<footer>
+    <p class="text-center">CREATED BY: <a href="https://www.linkedin.com/in/rutuj-chheda">RUTUJ CHHEDA</a></p>
+</footer>
+</html>

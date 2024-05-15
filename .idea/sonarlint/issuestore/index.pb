@@ -1,0 +1,19 @@
+
+9
+	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+@
+App/build.gradle,4\e\4e0e75af96fcd79ed0aa0460e63a6a6f98e1c9ff
+i
+9App/src/main/java/potholeComplaintManagementApp/Main.java,8\c\8c77e0797ec07150788ac621f2502403cb08cff5
+C
+App/settings.gradle,d\0\d09466d07bf5e6354ba8b7f4ffab9725192df831
+C
+Frontend/index.html,b\5\b5a0ad90d00c2e84c9dffb668da0bbae825db71e
+C
+Frontend/styles.css,b\6\b6706a8385e5f95bf594cc7239466eff3efbd708
+B
+Frontend/script.js,0\f\0f8efe3522c4353a317884dcdcb466ab83ca06d3
+@
+Frontend/form.js,b\1\b1a122fdd848e4aa282844392f5c618d0e617894
+K
+Frontend/allcomplaints.html,6\b\6b58b6e0beb8ce0955163dde7adf6bb808167a8d
