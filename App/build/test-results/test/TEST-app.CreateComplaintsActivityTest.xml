@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.CreateComplaintsActivityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-18T00:00:27" hostname="RUTUJ-DELL" time="1.948">
+  <properties/>
+  <testcase name="handleRequest_validRequest_createsComplaint()" classname="app.CreateComplaintsActivityTest" time="1.948"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

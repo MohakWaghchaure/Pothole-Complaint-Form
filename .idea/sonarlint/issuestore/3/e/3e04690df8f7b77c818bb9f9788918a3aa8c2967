@@ -1,0 +1,10 @@
+
+m	java:S106"+Replace this use of System.out by a logger.(òòö‡8¤ÁìÅø1J$13e80d27-7658-4218-b828-8b4c48eeaf93
+Š
+java:S1858"G"randomNumeric" returns a string, there's no need to call "toString()".(“ŸÀ©8¥ÁìÅø1J$11465bc3-903e-42cf-9908-2885ad1a1be3
+Š
+java:S1858"G"randomNumeric" returns a string, there's no need to call "toString()".(“ŸÀ©8¥ÁìÅø1J$9cbd7e2d-1e3c-4363-a46b-1095df74c9e6
+r	java:S106"+Replace this use of System.out by a logger.(ƒÇãˆúÿÿÿÿ8¦ÁìÅø1J$d9b14575-ce74-4ba3-bce3-243d2b4190a0
+r	java:S106!"+Replace this use of System.out by a logger.(®ÒÕ®üÿÿÿÿ8¬ÁìÅø1J$6d3f1876-dcbb-4ebb-9eb5-0b1e277a577d
+m	java:S106%"+Replace this use of System.out by a logger.(âøÚê8®ÁìÅø1J$6da07efd-8920-4cd8-9581-5ed9a4586b61
+r	java:S106&"+Replace this use of System.out by a logger.(é±ûÿÿÿÿ8¯ÁìÅø1J$eb9f20e8-83c7-4162-9977-b9f4302d40cf

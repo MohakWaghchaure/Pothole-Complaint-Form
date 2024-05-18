@@ -1,0 +1,30 @@
+Resources:
+  PotholeComplaintTable:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: pothole_complaints
+      AttributeDefinitions:
+        - AttributeName: complaintId
+          AttributeType: S
+        - AttributeName: addedOn
+          AttributeType: S
+        - AttributeName: userId
+          AttributeType: S
+      KeySchema:
+        - AttributeName: complaintId
+          KeyType: HASH
+        - AttributeName: addedOn
+          KeyType: RANGE
+      ProvisionedThroughput:
+        ReadCapacityUnits: 5
+        WriteCapacityUnits: 5
+      GlobalSecondaryIndexes:
+        - IndexName: UserIdIndex
+          KeySchema:
+            - AttributeName: userId
+              KeyType: HASH
+          Projection:
+            ProjectionType: ALL
+          ProvisionedThroughput:
+            ReadCapacityUnits: 50
+            WriteCapacityUnits: 50

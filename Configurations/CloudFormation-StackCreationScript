@@ -1,0 +1,1 @@
+aws cloudformation create-stack --region us-west-2 --stack-name LBC-potholeComplaintsTable --template-body file://Configurations/ComplaintsTableConfiguration.yaml --capabilities CAPABILITY_IAM
