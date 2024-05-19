@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="4.2.2" sequence="0" timestamp="1716072900977" analysisTimestamp="1716072901243" release="1.0-SNAPSHOT">
+  <Project projectName="App (spotbugsMain)">
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\activity\CreateComplaintsActivity.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\activity\CreateComplaintsActivity_Factory.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\activity\GetComplaintsActivty.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\activity\GetComplaintsActivty_Factory.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\converters\ModelConverter.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dependency\DaggerServiceComponent$Builder.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dependency\DaggerServiceComponent.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dependency\DynamoDBModule.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dependency\DynamoDBModule_ProvideDynamoDBMapperFactory.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dependency\ServiceComponent.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dynamodb\model\PotholeComplaint.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dynamodb\PotholeComplaintDao.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\dynamodb\PotholeComplaintDao_Factory.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\exceptions\ComplaintNotFoundException.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\exceptions\InvalidAttributeException.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\exceptions\InvalidAttributeValueException.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\lambda\CreateComplaintsProvider.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\lambda\GetComplaintsProvider.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\Main.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\PotholeComplaintsModel$Builder.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\PotholeComplaintsModel.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\requests\CreateComplaintsRequest$Builder.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\requests\CreateComplaintsRequest.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\requests\GetComplaintsRequest$Builder.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\requests\GetComplaintsRequest.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\results\CreateComplaintsResult$Builder.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\results\CreateComplaintsResult.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\results\GetComplaintsResult$Builder.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\results\GetComplaintsResult.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\models\Status.class</Jar>
+    <Jar>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\build\classes\java\main\app\util\PotholeComplaintServiceUtils.class</Jar>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.guava\guava\30.1.1-jre\87e0fd1df874ea3cbe577702fe6f17068b790fd8\guava-30.1.1-jre.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.7\751f548c85fa49f330cecbb1875893f971b33c4e\gson-2.7.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.dagger\dagger\2.15\13cc1f509deda05c1fe5a315519d7cb743b8333b\dagger-2.15.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-lambda-java-core\1.2.2\7f6586f0892a7d5277e02d6b2649eb6a19be82b8\aws-lambda-java-core-1.2.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-lambda-java-events\3.11.1\cf338fc18481fd67e973c554e3e68b81e5b38e72\aws-lambda-java-events-3.11.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-core\2.17.1\779f60f3844dadc3ef597976fcb1e5127b1f343d\log4j-core-2.17.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.apache.logging.log4j\log4j-api\2.17.1\d771af8e336e372fb5399c99edabe0919aeaf5b2\log4j-api-2.17.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-java-sdk-dynamodb\1.9.0\7552f21d2cf0e809c180a21f1b57b855cbf134e1\aws-java-sdk-dynamodb-1.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-params\5.7.2\685f832f8c54dd40100f646d61aca88ed9545421\junit-jupiter-params-5.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter-api\5.7.2\f4b4079732a9c537983324cfa4e46655f21d2c56\junit-jupiter-api-5.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.junit.platform\junit-platform-commons\1.7.2\34adfea6c13fc4a996cf38cdad80800ce850d198\junit-platform-commons-1.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.junit.jupiter\junit-jupiter\5.7.2\62faa742964a9d8dab8fdb4a0eab7b01441c171f\junit-jupiter-5.7.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.testng\testng\6.14.3\d24515dc253e77e54b73df97e1fb2eb7faf34fdd\testng-6.14.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.apache.commons\commons-lang3\3.0\8873bd0bb5cb9ee37f1b04578eb7e26fcdd44cb0\commons-lang3-3.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.guava\failureaccess\1.0.1\1dcf1de382a0bf95a3d8b0849546c88bac1292c9\failureaccess-1.0.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.guava\listenablefuture\9999.0-empty-to-avoid-conflict-with-guava\b421526c5f297295adef1c886e5246c39d4ac629\listenablefuture-9999.0-empty-to-avoid-conflict-with-guava.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.code.findbugs\jsr305\3.0.2\25ea2e8b0c338a877313bd4672d3fe056ea78f0d\jsr305-3.0.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.checkerframework\checker-qual\3.8.0\6b83e4a33220272c3a08991498ba9dc09519f190\checker-qual-3.8.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.errorprone\error_prone_annotations\2.5.1\562d366678b89ce5d6b6b82c1a073880341e3fba\error_prone_annotations-2.5.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.google.j2objc\j2objc-annotations\1.3\ba035118bc8bac37d7eff77700720999acd9986d\j2objc-annotations-1.3.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\javax.inject\javax.inject\1\6975da39a7040257bd51d21a231b76c915872d38\javax.inject-1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-java-sdk-s3\1.9.0\f6cb9fab6e06448184a93967e093fac567a96e67\aws-java-sdk-s3-1.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.amazonaws\aws-java-sdk-core\1.9.0\e2d91fa315d04e94655ce8395d0e5a6f4c49e89a\aws-java-sdk-core-1.9.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.10.8\b0442d652c209a7ba7af0410ce219d997a447701\joda-time-2.10.8.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.beust\jcommander\1.72\6375e521c1e11d6563d4f25a07ce124ccf8cd171\jcommander-1.72.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.apache-extras.beanshell\bsh\2.0b6\fb418f9b33a0b951e9a2978b4b6ee93b2707e72f\bsh-2.0b6.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.apiguardian\apiguardian-api\1.1.0\fc9dff4bb36d627bdc553de77e1f17efd790876c\apiguardian-api-1.1.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.opentest4j\opentest4j\1.2.0\28c11eb91f9b6d8e200631d46e20a7f407f2a046\opentest4j-1.2.0.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpclient\4.2\894b77b74ac06206075bccc22868ef83d69e383b\httpclient-4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\commons-logging\commons-logging\1.1.1\5043bfebc3db072ed80fbd362e7caf00e885d8ae\commons-logging-1.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-databind\2.1.1\38d2b3c0c89af5b937fd98c3e558bf6b58c14aa2\jackson-databind-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-core\2.1.1\82ad1c5f92f6dcc6291f5c46ebacb975eaa844de\jackson-core-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\com.fasterxml.jackson.core\jackson-annotations\2.1.1\b01cc83e745fc4425a3968fafbf8e5b8254a6dd\jackson-annotations-2.1.1.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\org.apache.httpcomponents\httpcore\4.2\9e431c80f58ec65460fcbdaaad802af668bb3fda\httpcore-4.2.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>C:\Users\Rutuj Daily\.gradle\caches\modules-2\files-2.1\commons-codec\commons-codec\1.6\b7f0fc8f61ecadeb3695f0b9464755eee44374d4\commons-codec-1.6.jar</AuxClasspathEntry>
+    <SrcDir>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\src\main\resources</SrcDir>
+    <SrcDir>D:\bloomtech\unit5\Rutuj-Pothole-Complaint-Form\Pothole-Complaint-Form\App\src\main\java</SrcDir>
+  </Project>
+  <BugInstance type="SA_FIELD_SELF_ASSIGNMENT" priority="1" rank="1" abbrev="SA" category="CORRECTNESS" instanceHash="5248c0dd8146f922cef252db2cb3a94b" instanceOccurrenceNum="0" instanceOccurrenceMax="0">
+    <ShortMessage>Self assignment of field</ShortMessage>
+    <LongMessage>Self assignment of field PotholeComplaintsModel.base64Images in app.models.PotholeComplaintsModel.setBase64image(List)</LongMessage>
+    <Class classname="app.models.PotholeComplaintsModel" primary="true">
+      <SourceLine classname="app.models.PotholeComplaintsModel" start="18" end="220" sourcefile="PotholeComplaintsModel.java" sourcepath="app/models/PotholeComplaintsModel.java" relSourcepath="java\app\models\PotholeComplaintsModel.java">
+        <Message>At PotholeComplaintsModel.java:[lines 18-220]</Message>
+      </SourceLine>
+      <Message>In class app.models.PotholeComplaintsModel</Message>
+    </Class>
+    <Method classname="app.models.PotholeComplaintsModel" name="setBase64image" signature="(Ljava/util/List;)V" isStatic="false" primary="true">
+      <SourceLine classname="app.models.PotholeComplaintsModel" start="111" end="112" startBytecode="0" endBytecode="82" sourcefile="PotholeComplaintsModel.java" sourcepath="app/models/PotholeComplaintsModel.java" relSourcepath="java\app\models\PotholeComplaintsModel.java"/>
+      <Message>In method app.models.PotholeComplaintsModel.setBase64image(List)</Message>
+    </Method>
+    <Field classname="app.models.PotholeComplaintsModel" name="base64Images" signature="Ljava/util/List;" isStatic="false" primary="true">
+      <SourceLine classname="app.models.PotholeComplaintsModel" sourcefile="PotholeComplaintsModel.java" sourcepath="app/models/PotholeComplaintsModel.java" relSourcepath="java\app\models\PotholeComplaintsModel.java">
+        <Message>In PotholeComplaintsModel.java</Message>
+      </SourceLine>
+      <Message>Field app.models.PotholeComplaintsModel.base64Images</Message>
+    </Field>
+    <LocalVariable name="base64image" register="1" pc="0" role="LOCAL_VARIABLE_DID_YOU_MEAN">
+      <Message>Did you mean to refer to the local variable base64image</Message>
+    </LocalVariable>
+    <SourceLine classname="app.models.PotholeComplaintsModel" primary="true" start="111" end="111" startBytecode="5" endBytecode="5" sourcefile="PotholeComplaintsModel.java" sourcepath="app/models/PotholeComplaintsModel.java" relSourcepath="java\app\models\PotholeComplaintsModel.java">
+      <Message>At PotholeComplaintsModel.java:[line 111]</Message>
+    </SourceLine>
+  </BugInstance>
+  <BugCategory category="CORRECTNESS">
+    <Description>Correctness</Description>
+  </BugCategory>
+  <BugPattern type="SA_FIELD_SELF_ASSIGNMENT" abbrev="SA" category="CORRECTNESS">
+    <ShortDescription>Self assignment of field</ShortDescription>
+    <Details><![CDATA[
+
+<p> This method contains a self assignment of a field; e.g.
+</p>
+<pre><code>int x;
+public void foo() {
+    x = x;
+}
+</code></pre>
+<p>Such assignments are useless, and may indicate a logic error or typo.</p>
+
+    ]]></Details>
+  </BugPattern>
+  <BugCode abbrev="SA">
+    <Description>Useless self-operation</Description>
+  </BugCode>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Sat, 18 May 2024 15:55:00 -0700" total_classes="31" referenced_classes="121" total_bugs="1" total_size="736" num_packages="12" java_version="11.0.19" vm_version="11.0.19+7-LTS" cpu_seconds="16.05" clock_seconds="6.56" peak_mbytes="247.34" alloc_mbytes="512.00" gc_seconds="0.03" priority_1="1">
+    <FileStats path="app/Main.java" bugCount="0" size="31"/>
+    <FileStats path="app/activity/CreateComplaintsActivity.java" bugCount="0" size="34"/>
+    <FileStats path="app/activity/CreateComplaintsActivity_Factory.java" bugCount="0" size="12"/>
+    <FileStats path="app/activity/GetComplaintsActivty.java" bugCount="0" size="23"/>
+    <FileStats path="app/activity/GetComplaintsActivty_Factory.java" bugCount="0" size="12"/>
+    <FileStats path="app/converters/ModelConverter.java" bugCount="0" size="17"/>
+    <FileStats path="app/dependency/DaggerServiceComponent.java" bugCount="0" size="32"/>
+    <FileStats path="app/dependency/DynamoDBModule.java" bugCount="0" size="7"/>
+    <FileStats path="app/dependency/DynamoDBModule_ProvideDynamoDBMapperFactory.java" bugCount="0" size="16"/>
+    <FileStats path="app/dependency/ServiceComponent.java" bugCount="0" size="3"/>
+    <FileStats path="app/dynamodb/PotholeComplaintDao.java" bugCount="0" size="20"/>
+    <FileStats path="app/dynamodb/PotholeComplaintDao_Factory.java" bugCount="0" size="12"/>
+    <FileStats path="app/dynamodb/model/PotholeComplaint.java" bugCount="0" size="63"/>
+    <FileStats path="app/exceptions/ComplaintNotFoundException.java" bugCount="0" size="14"/>
+    <FileStats path="app/exceptions/InvalidAttributeException.java" bugCount="0" size="14"/>
+    <FileStats path="app/exceptions/InvalidAttributeValueException.java" bugCount="0" size="14"/>
+    <FileStats path="app/lambda/CreateComplaintsProvider.java" bugCount="0" size="9"/>
+    <FileStats path="app/lambda/GetComplaintsProvider.java" bugCount="0" size="9"/>
+    <FileStats path="app/models/PotholeComplaintsModel.java" bugCount="1" size="142" bugHash="5074e5d080a0330b77bf15711ae36e70"/>
+    <FileStats path="app/models/Status.java" bugCount="0" size="13"/>
+    <FileStats path="app/models/requests/CreateComplaintsRequest.java" bugCount="0" size="104"/>
+    <FileStats path="app/models/requests/GetComplaintsRequest.java" bugCount="0" size="47"/>
+    <FileStats path="app/models/results/CreateComplaintsResult.java" bugCount="0" size="22"/>
+    <FileStats path="app/models/results/GetComplaintsResult.java" bugCount="0" size="33"/>
+    <FileStats path="app/util/PotholeComplaintServiceUtils.java" bugCount="0" size="33"/>
+    <PackageStats package="app" total_bugs="0" total_types="1" total_size="31">
+      <ClassStats class="app.Main" sourceFile="Main.java" interface="false" size="31" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.activity" total_bugs="0" total_types="4" total_size="81">
+      <ClassStats class="app.CreateComplaintsActivity" sourceFile="CreateComplaintsActivity.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="app.CreateComplaintsActivity_Factory" sourceFile="CreateComplaintsActivity_Factory.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="app.GetComplaintsActivty" sourceFile="GetComplaintsActivty.java" interface="false" size="23" bugs="0"/>
+      <ClassStats class="app.GetComplaintsActivty_Factory" sourceFile="GetComplaintsActivty_Factory.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.converters" total_bugs="0" total_types="1" total_size="17">
+      <ClassStats class="app.converters.ModelConverter" sourceFile="ModelConverter.java" interface="false" size="17" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.dependency" total_bugs="0" total_types="5" total_size="58">
+      <ClassStats class="app.dependency.DaggerServiceComponent" sourceFile="DaggerServiceComponent.java" interface="false" size="21" bugs="0"/>
+      <ClassStats class="app.dependency.DaggerServiceComponent$Builder" sourceFile="DaggerServiceComponent.java" interface="false" size="11" bugs="0"/>
+      <ClassStats class="app.dependency.DynamoDBModule" sourceFile="DynamoDBModule.java" interface="false" size="7" bugs="0"/>
+      <ClassStats class="app.dependency.DynamoDBModule_ProvideDynamoDBMapperFactory" sourceFile="DynamoDBModule_ProvideDynamoDBMapperFactory.java" interface="false" size="16" bugs="0"/>
+      <ClassStats class="app.dependency.ServiceComponent" sourceFile="ServiceComponent.java" interface="true" size="3" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.dynamodb" total_bugs="0" total_types="2" total_size="32">
+      <ClassStats class="app.dynamodb.PotholeComplaintDao" sourceFile="PotholeComplaintDao.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="app.dynamodb.PotholeComplaintDao_Factory" sourceFile="PotholeComplaintDao_Factory.java" interface="false" size="12" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.dynamodb.model" total_bugs="0" total_types="1" total_size="63">
+      <ClassStats class="app.dynamodb.model.PotholeComplaint" sourceFile="PotholeComplaint.java" interface="false" size="63" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.exceptions" total_bugs="0" total_types="3" total_size="42">
+      <ClassStats class="app.exceptions.ComplaintNotFoundException" sourceFile="ComplaintNotFoundException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="app.exceptions.InvalidAttributeException" sourceFile="InvalidAttributeException.java" interface="false" size="14" bugs="0"/>
+      <ClassStats class="app.exceptions.InvalidAttributeValueException" sourceFile="InvalidAttributeValueException.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.lambda" total_bugs="0" total_types="2" total_size="18">
+      <ClassStats class="app.lambda.CreateComplaintsProvider" sourceFile="CreateComplaintsProvider.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="app.lambda.GetComplaintsProvider" sourceFile="GetComplaintsProvider.java" interface="false" size="9" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.models" total_bugs="1" total_types="3" total_size="155" priority_1="1">
+      <ClassStats class="app.models.PotholeComplaintsModel" sourceFile="PotholeComplaintsModel.java" interface="false" size="97" bugs="1" priority_1="1"/>
+      <ClassStats class="app.models.PotholeComplaintsModel$Builder" sourceFile="PotholeComplaintsModel.java" interface="false" size="45" bugs="0"/>
+      <ClassStats class="app.models.Status" sourceFile="Status.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.models.requests" total_bugs="0" total_types="4" total_size="151">
+      <ClassStats class="app.models.requests.CreateComplaintsRequest" sourceFile="CreateComplaintsRequest.java" interface="false" size="74" bugs="0"/>
+      <ClassStats class="app.models.requests.CreateComplaintsRequest$Builder" sourceFile="CreateComplaintsRequest.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="app.models.requests.GetComplaintsRequest" sourceFile="GetComplaintsRequest.java" interface="false" size="33" bugs="0"/>
+      <ClassStats class="app.models.requests.GetComplaintsRequest$Builder" sourceFile="GetComplaintsRequest.java" interface="false" size="14" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.models.results" total_bugs="0" total_types="4" total_size="55">
+      <ClassStats class="app.models.results.CreateComplaintsResult" sourceFile="CreateComplaintsResult.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="app.models.results.CreateComplaintsResult$Builder" sourceFile="CreateComplaintsResult.java" interface="false" size="9" bugs="0"/>
+      <ClassStats class="app.models.results.GetComplaintsResult" sourceFile="GetComplaintsResult.java" interface="false" size="20" bugs="0"/>
+      <ClassStats class="app.models.results.GetComplaintsResult$Builder" sourceFile="GetComplaintsResult.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="app.util" total_bugs="0" total_types="1" total_size="33">
+      <ClassStats class="app.util.PotholeComplaintServiceUtils" sourceFile="PotholeComplaintServiceUtils.java" interface="false" size="33" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="1162" invocations="1056" avgMicrosecondsPerInvocation="1100" maxMicrosecondsPerInvocation="68352" standardDeviationMicrosecondsPerInvocation="3430"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="471" invocations="1060" avgMicrosecondsPerInvocation="444" maxMicrosecondsPerInvocation="49487" standardDeviationMicrosecondsPerInvocation="1854"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="336" invocations="121" avgMicrosecondsPerInvocation="2784" maxMicrosecondsPerInvocation="34751" standardDeviationMicrosecondsPerInvocation="5485"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="308" invocations="121" avgMicrosecondsPerInvocation="2549" maxMicrosecondsPerInvocation="28984" standardDeviationMicrosecondsPerInvocation="5061"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="205" invocations="465" avgMicrosecondsPerInvocation="442" maxMicrosecondsPerInvocation="12206" standardDeviationMicrosecondsPerInvocation="936"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="128" invocations="184" avgMicrosecondsPerInvocation="699" maxMicrosecondsPerInvocation="46511" standardDeviationMicrosecondsPerInvocation="3727"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="113" invocations="121" avgMicrosecondsPerInvocation="940" maxMicrosecondsPerInvocation="32127" standardDeviationMicrosecondsPerInvocation="3060"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="111" invocations="1012" avgMicrosecondsPerInvocation="110" maxMicrosecondsPerInvocation="2276" standardDeviationMicrosecondsPerInvocation="224"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.MethodGenFactory" totalMilliseconds="103" invocations="193" avgMicrosecondsPerInvocation="538" maxMicrosecondsPerInvocation="79619" standardDeviationMicrosecondsPerInvocation="5710"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="90" invocations="121" avgMicrosecondsPerInvocation="749" maxMicrosecondsPerInvocation="20632" standardDeviationMicrosecondsPerInvocation="2165"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.OverridingEqualsNotSymmetrical" totalMilliseconds="85" invocations="121" avgMicrosecondsPerInvocation="705" maxMicrosecondsPerInvocation="35415" standardDeviationMicrosecondsPerInvocation="3259"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="80" invocations="121" avgMicrosecondsPerInvocation="663" maxMicrosecondsPerInvocation="6749" standardDeviationMicrosecondsPerInvocation="1235"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="72" invocations="191" avgMicrosecondsPerInvocation="379" maxMicrosecondsPerInvocation="17192" standardDeviationMicrosecondsPerInvocation="1569"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.TypeDataflowFactory" totalMilliseconds="72" invocations="191" avgMicrosecondsPerInvocation="378" maxMicrosecondsPerInvocation="17408" standardDeviationMicrosecondsPerInvocation="1373"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="70" invocations="121" avgMicrosecondsPerInvocation="580" maxMicrosecondsPerInvocation="9446" standardDeviationMicrosecondsPerInvocation="1296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.CFGFactory" totalMilliseconds="67" invocations="191" avgMicrosecondsPerInvocation="353" maxMicrosecondsPerInvocation="18423" standardDeviationMicrosecondsPerInvocation="1351"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="67" invocations="191" avgMicrosecondsPerInvocation="352" maxMicrosecondsPerInvocation="9328" standardDeviationMicrosecondsPerInvocation="908"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History></History>
+</BugCollection>

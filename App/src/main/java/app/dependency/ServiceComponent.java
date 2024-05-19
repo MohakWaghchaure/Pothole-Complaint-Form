@@ -1,7 +1,7 @@
 package app.dependency;
 
 import app.activity.CreateComplaintsActivity;
-import app.activity.GetComplaintsActivty;
+import app.activity.GetComplaintsActivity;
 import dagger.Component;
 
 import javax.inject.Singleton;
@@ -10,5 +10,5 @@ import javax.inject.Singleton;
 @Singleton
 public interface ServiceComponent {
     CreateComplaintsActivity provideCreateComplaintsActivity();
-    GetComplaintsActivty provideGetComplaintsActivty();
+    GetComplaintsActivity provideGetComplaintsActivity();
 }

@@ -1,7 +1,7 @@
 package app.dependency;
 
 import app.activity.CreateComplaintsActivity;
-import app.activity.GetComplaintsActivty;
+import app.activity.GetComplaintsActivity;
 import app.dynamodb.PotholeComplaintDao;
 import com.amazonaws.services.dynamodbv2.datamodeling.DynamoDBMapper;
 import dagger.internal.DoubleCheck;
@@ -45,9 +45,10 @@ public final class DaggerServiceComponent implements ServiceComponent {
   }
 
   @Override
-  public GetComplaintsActivty provideGetComplaintsActivty() {
-    return new GetComplaintsActivty(getPotholeComplaintDao());
+  public GetComplaintsActivity provideGetComplaintsActivity() {
+    return new GetComplaintsActivity(getPotholeComplaintDao());
   }
+
 
   public static final class Builder {
     private DynamoDBModule dynamoDBModule;

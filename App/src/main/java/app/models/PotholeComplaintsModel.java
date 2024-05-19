@@ -1,5 +1,6 @@
 package app.models;
 
+import java.util.List;
 import java.util.Objects;
 
 public class PotholeComplaintsModel {
@@ -12,7 +13,7 @@ public class PotholeComplaintsModel {
     private String comments;
     private String addedOn;
     private String status;
-    private String base64image;
+    private List<String> base64Images;
 
     public PotholeComplaintsModel() {
     }
@@ -27,7 +28,7 @@ public class PotholeComplaintsModel {
         this.comments = builder.comments;
         this.addedOn = builder.addedOn;
         this.status = builder.status;
-        this.base64image = builder.base64image;
+        this.base64Images = builder.base64Images;
     }
 
     public String getComplaintId() {
@@ -102,12 +103,12 @@ public class PotholeComplaintsModel {
         this.status = status;
     }
 
-    public String getBase64image() {
-        return base64image;
+    public List<String> getBase64image() {
+        return base64Images;
     }
 
-    public void setBase64image(String base64image) {
-        this.base64image = base64image;
+    public void setBase64image(List<String> base64image) {
+        this.base64Images = base64Images;
     }
 
     public static Builder builder(){
@@ -124,7 +125,7 @@ public class PotholeComplaintsModel {
         private String comments;
         private String addedOn;
         private String status;
-        private String base64image;
+        private List<String> base64Images;
 
         public Builder withComplaintId(String complaintId) {
             this.complaintId = complaintId;
@@ -171,8 +172,8 @@ public class PotholeComplaintsModel {
             return this;
         }
 
-        public Builder withbase64image(String base64image) {
-            this.base64image = base64image;
+        public Builder withbase64images(List<String> base64Images) {
+            this.base64Images = base64Images;
             return this;
         }
 
@@ -193,7 +194,7 @@ public class PotholeComplaintsModel {
                 ", comments='" + comments + '\'' +
                 ", addedOn='" + addedOn + '\'' +
                 ", status='" + status + '\'' +
-                ", base64image='" + base64image + '\'' +
+                ", base64Images='" + base64Images + '\'' +
                 '}';
     }
 
@@ -211,11 +212,11 @@ public class PotholeComplaintsModel {
                 comments.equals(that.comments) &&
                 addedOn.equals(that.addedOn) &&
                 status.equals(that.status) &&
-                base64image.equals(that.base64image);
+                base64Images.equals(that.base64Images);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(complaintId, userId, streetName, nearbyLandmark, longitude, latitude, comments, addedOn, status, base64image);
+        return Objects.hash(complaintId, userId, streetName, nearbyLandmark, longitude, latitude, comments, addedOn, status, base64Images);
     }
 }

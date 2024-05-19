@@ -1,5 +1,6 @@
 package app.models.requests;
 
+import java.util.List;
 import java.util.Objects;
 
 public class CreateComplaintsRequest {
@@ -9,8 +10,7 @@ public class CreateComplaintsRequest {
     private Double longitude;
     private Double latitude;
     private String comments;
-    private String base64Image;
-
+    private List<String> base64Images;
 
     public String getStreetName() {
         return streetName;
@@ -52,25 +52,24 @@ public class CreateComplaintsRequest {
         this.comments = comments;
     }
 
-    public String getBase64Image() {
-        return base64Image;
+    public List<String> getBase64Images() {
+        return base64Images;
     }
 
-    public void setBase64Image(String base64Image) {
-        this.base64Image = base64Image;
+    public void setBase64Images(List<String> base64Images) {
+        this.base64Images = base64Images;
     }
-
 
     public CreateComplaintsRequest() {
     }
 
-    public CreateComplaintsRequest(String streetName, String nearbyLandmark, Double longitude, Double latitude, String comments, String base64Image) {
+    public CreateComplaintsRequest(String streetName, String nearbyLandmark, Double longitude, Double latitude, String comments, List<String> base64Images) {
         this.streetName = streetName;
         this.nearbyLandmark = nearbyLandmark;
         this.longitude = longitude;
         this.latitude = latitude;
         this.comments = comments;
-        this.base64Image = base64Image;
+        this.base64Images = base64Images;
     }
 
     public CreateComplaintsRequest(Builder builder) {
@@ -79,7 +78,7 @@ public class CreateComplaintsRequest {
         this.longitude = builder.longitude;
         this.latitude = builder.latitude;
         this.comments = builder.comments;
-        this.base64Image = builder.base64Image;
+        this.base64Images = builder.base64Images;
     }
 
     public static Builder builder() {
@@ -92,10 +91,9 @@ public class CreateComplaintsRequest {
         Double longitude;
         Double latitude;
         String comments;
-        String base64Image;
+        List<String> base64Images;
 
         public Builder() {
-
         }
 
         public Builder withStreetName(String streetName) {
@@ -123,8 +121,8 @@ public class CreateComplaintsRequest {
             return this;
         }
 
-        public Builder withBase64Image(String base64Image) {
-            this.base64Image = base64Image;
+        public Builder withBase64Images(List<String> base64Images) {
+            this.base64Images = base64Images;
             return this;
         }
 
@@ -136,26 +134,30 @@ public class CreateComplaintsRequest {
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof CreateComplaintsRequest that)) return false;
-        return Objects.equals(getStreetName(), that.getStreetName()) && Objects.equals(getNearbyLandmark(), that.getNearbyLandmark()) && Objects.equals(getLongitude(), that.getLongitude()) && Objects.equals(getLatitude(), that.getLatitude()) && Objects.equals(getComments(), that.getComments()) && Objects.equals(getBase64Image(), that.getBase64Image());
+        if (!(o instanceof CreateComplaintsRequest)) return false;
+        CreateComplaintsRequest that = (CreateComplaintsRequest) o;
+        return Objects.equals(streetName, that.streetName) &&
+                Objects.equals(nearbyLandmark, that.nearbyLandmark) &&
+                Objects.equals(longitude, that.longitude) &&
+                Objects.equals(latitude, that.latitude) &&
+                Objects.equals(comments, that.comments) &&
+                Objects.equals(base64Images, that.base64Images);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getStreetName(), getNearbyLandmark(), getLongitude(), getLatitude(), getComments(), getBase64Image());
+        return Objects.hash(streetName, nearbyLandmark, longitude, latitude, comments, base64Images);
     }
 
     @Override
     public String toString() {
-        return "AddComplaintsRequest{" +
+        return "CreateComplaintsRequest{" +
                 "streetName='" + streetName + '\'' +
                 ", nearbyLandmark='" + nearbyLandmark + '\'' +
                 ", longitude=" + longitude +
                 ", latitude=" + latitude +
                 ", comments='" + comments + '\'' +
-                ", base64Image='" + base64Image + '\'' +
+                ", base64Images=" + base64Images +
                 '}';
     }
-
-
 }

@@ -17,7 +17,7 @@ public class ModelConverter {
             .withComments(potholeComplaint.getComments())
             .withAddedOn(potholeComplaint.getAddedOn())
             .withStatus(potholeComplaint.getStatus())
-            .withbase64image(potholeComplaint.getBase64image())
+            .withbase64images(potholeComplaint.getBase64Images())
             .build();
 
     }

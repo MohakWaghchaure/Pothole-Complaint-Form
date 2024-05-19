@@ -4,45 +4,40 @@ import java.util.Objects;
 
 public class GetComplaintsRequest {
 
-    private Integer limit;
+    private Integer page;
 
-    public Integer getLimit() {
-        return limit;
+    public Integer getPage() {
+        return page;
     }
 
-    public void setLimit(Integer limit) {
-        this.limit = limit;
+    public void setPage(Integer page) {
+        this.page = page;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof GetComplaintsRequest that)) return false;
-        return Objects.equals(getLimit(), that.getLimit());
+        return Objects.equals(getPage(), that.getPage());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hashCode(getLimit());
+        return Objects.hashCode(getPage());
     }
 
     @Override
     public String toString() {
         return "GetComplaintsRequest{" +
-                "limit=" + limit +
+                "page=" + page +
                 '}';
     }
 
-    public GetComplaintsRequest(){
-
+    public GetComplaintsRequest() {
     }
 
-    public GetComplaintsRequest(Builder builder) {
-        this.limit = builder.limit;
-    }
-
-    public GetComplaintsRequest(Integer limit) {
-        this.limit = limit;
+    public GetComplaintsRequest(Integer page) {
+        this.page = page;
     }
 
     public static Builder builder() {
@@ -50,18 +45,18 @@ public class GetComplaintsRequest {
     }
 
     public static final class Builder {
-        Integer limit;
+        Integer page;
 
         private Builder() {
         }
 
-        public Builder withLimit(Integer limitToUse) {
-            this.limit = limitToUse;
+        public Builder withPage(Integer pageToUse) {
+            this.page = pageToUse;
             return this;
         }
 
         public GetComplaintsRequest build() {
-            return new GetComplaintsRequest(this);
+            return new GetComplaintsRequest(this.page);
         }
     }
 }

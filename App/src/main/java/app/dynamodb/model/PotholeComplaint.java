@@ -2,6 +2,8 @@ package app.dynamodb.model;
 
 import com.amazonaws.services.dynamodbv2.datamodeling.*;
 
+import java.util.List;
+
 /**
  * Represents a complaint in the pothole_complaints table.
  */
@@ -16,7 +18,7 @@ public class PotholeComplaint {
     private String comments;
     private String addedOn;
     private String status;
-    private String base64image;
+    private List<String> base64Images;
 
     @DynamoDBHashKey(attributeName = "complaintId")
     public String getComplaintId() {
@@ -99,12 +101,13 @@ public class PotholeComplaint {
         this.status = status;
     }
 
-    @DynamoDBAttribute(attributeName = "base64image")
-    public String getBase64image() {
-        return base64image;
+    @DynamoDBAttribute(attributeName = "base64Images")
+    public List<String> getBase64Images() {
+        return base64Images;
     }
 
-    public void setBase64image(String base64image) {
-        this.base64image = base64image;
+    public void setBase64Images(List<String> base64Images) {
+        this.base64Images = base64Images;
     }
+
 }

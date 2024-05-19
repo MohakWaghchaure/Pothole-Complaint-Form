@@ -29,9 +29,11 @@ public class CreateComplaintsActivity implements RequestHandler<CreateComplaints
     public CreateComplaintsResult handleRequest(final CreateComplaintsRequest createComplaintsRequest, Context context) {
         log.info("Received CreateComplaintsRequest {}", createComplaintsRequest);
 
-        if (!PotholeComplaintServiceUtils.isValidLatitude(String.valueOf(createComplaintsRequest.getLatitude()))
-                || !PotholeComplaintServiceUtils.isValidLongitude(String.valueOf(createComplaintsRequest.getLongitude()))) {
-            throw new InvalidAttributeValueException("Invalid latitude or longitude");
+        if (!PotholeComplaintServiceUtils.isValidLatitude(String.valueOf(createComplaintsRequest.getLatitude()))) {
+            throw new InvalidAttributeValueException("Invalid latitude");
+        }
+        if(!PotholeComplaintServiceUtils.isValidLongitude(String.valueOf(createComplaintsRequest.getLongitude()))){
+            throw new InvalidAttributeValueException("Invalid longitude");
         }
 
         String complaintId = PotholeComplaintServiceUtils.generateComplaintId();
@@ -47,17 +49,12 @@ public class CreateComplaintsActivity implements RequestHandler<CreateComplaints
         potholeComplaint.setComments(createComplaintsRequest.getComments());
         potholeComplaint.setAddedOn(PotholeComplaintServiceUtils.getIsoDateTimeString());
         potholeComplaint.setStatus(Status.PENDING.toString());
-        potholeComplaint.setBase64image(createComplaintsRequest.getBase64Image());
+        potholeComplaint.setBase64Images(createComplaintsRequest.getBase64Images());
 
         potholeComplaintDao.saveComplaint(potholeComplaint);
         PotholeComplaintsModel potholeComplaintsModel = new ModelConverter().toPotholeComplaintsModel(potholeComplaint);
         return CreateComplaintsResult.builder()
                 .withPotholeComplaint(potholeComplaintsModel)
                 .build();
-
     }
-
-
-
-
 }

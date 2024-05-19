@@ -6,9 +6,11 @@ import java.util.List;
 
 public class GetComplaintsResult {
     private List<PotholeComplaintsModel> potholeComplaintsList;
+    private int currentPage;
 
     public GetComplaintsResult(Builder builder) {
         this.potholeComplaintsList = builder.potholeComplaintsList;
+        this.currentPage = builder.currentPage;
     }
 
     public List<PotholeComplaintsModel> getPotholeComplaintsList() {
@@ -19,16 +21,35 @@ public class GetComplaintsResult {
         this.potholeComplaintsList = potholeComplaintsList;
     }
 
-    public static Builder builder() {return new Builder();}
+    public int getCurrentPage() {
+        return currentPage;
+    }
+
+    public void setCurrentPage(int currentPage) {
+        this.currentPage = currentPage;
+    }
+
+    public static Builder builder() {
+        return new Builder();
+    }
 
     public static final class Builder {
         private List<PotholeComplaintsModel> potholeComplaintsList;
+        private int currentPage;
 
         public Builder withComplaintsList(List<PotholeComplaintsModel> complaintListToUse) {
             this.potholeComplaintsList = complaintListToUse;
             return this;
         }
 
-        public GetComplaintsResult build() {return new GetComplaintsResult(this);}
+        public Builder withCurrentPage(int currentPageToUse) {
+            this.currentPage = currentPageToUse;
+            return this;
+        }
+
+        public GetComplaintsResult build() {
+            return new GetComplaintsResult(this);
+        }
     }
 }
+

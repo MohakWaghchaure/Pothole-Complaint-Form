@@ -20,4 +20,6 @@ public class DynamoDBModule {
         return new DynamoDBMapper(client);
     }
 
+
+
 }
