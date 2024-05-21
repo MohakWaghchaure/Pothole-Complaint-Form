@@ -1,0 +1,57 @@
+@startuml
+title Create Pothole Complaint Sequence Diagram
+
+actor Client
+participant "API Gateway" as APIGateway
+participant Lambda
+participant CreateComplaintsActivity
+participant PotholeComplaintDao
+participant PotholeComplaintServiceUtils
+participant ModelConverter
+database DynamoDB
+
+Client -> APIGateway : POST /complaints
+activate Client
+APIGateway -> Lambda
+activate Lambda
+activate CreateComplaintsActivity
+activate PotholeComplaintDao
+Lambda -> CreateComplaintsActivity :  handleRequest(CreateComplaintRequest, Context)
+CreateComplaintsActivity -> PotholeComplaintServiceUtils : isValidLatitude(latitude)
+CreateComplaintsActivity -> PotholeComplaintServiceUtils : isValidLongitude(longitude)
+
+alt if latitude or longitude invalid
+    CreateComplaintsActivity <-- PotholeComplaintServiceUtils : false
+    Lambda <-- CreateComplaintsActivity : throw InvalidAttributeValueException
+    APIGateway <-- Lambda
+    Client <-- APIGateway : 4xx Response
+else otherwise, continue
+end
+
+CreateComplaintsActivity -> PotholeComplaintServiceUtils : generateUserId()
+CreateComplaintsActivity <-- PotholeComplaintServiceUtils : new User ID
+
+CreateComplaintsActivity -> PotholeComplaintServiceUtils : generateComplaintId()
+CreateComplaintsActivity <-- PotholeComplaintServiceUtils : new Complaint ID
+
+CreateComplaintsActivity -> CreateComplaintsActivity : populate Pothole Complaint object
+
+CreateComplaintsActivity -> PotholeComplaintDao : savePotholeComplaint(Pothole Complaint)
+PotholeComplaintDao -> DynamoDB : save Pothole Complaint
+PotholeComplaintDao <-- DynamoDB
+CreateComplaintsActivity <-- PotholeComplaintDao : Pothole Complaint
+
+CreateComplaintsActivity -> ModelConverter : toPotholeComplaintModel(PotholeComplaint)
+activate ModelConverter
+CreateComplaintsActivity <-- ModelConverter : PotholeComplaintModel
+deactivate ModelConverter
+
+Lambda <-- CreateComplaintsActivity : CreatePotholeComplaintResponse
+deactivate PotholeComplaintDao
+deactivate CreateComplaintsActivity
+APIGateway <-- Lambda
+deactivate Lambda
+Client <-- APIGateway : 200 Response
+deactivate Client
+
+@enduml
