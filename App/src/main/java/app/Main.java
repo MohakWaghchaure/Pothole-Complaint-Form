@@ -33,15 +33,15 @@ public class Main {
         System.out.println("\n");
 
         PotholeComplaintsModel test1 = PotholeComplaintsModel.builder()
-                .withComplaintId(generateComplaintId())
-                .withUserId(generateUserId())
+//                .withComplaintId(generateComplaintId())
+//                .withUserId(generateUserId())
                 .withLatitude(40.7579571985636)
                 .withLongitude(-73.98559219631903)
                 .withStreetName("Broadway")
                 .withNearbyLandmark("Times Square intersection at broadway and  7th avenue")
                 .withComments("Test Comments")
-                .withAddedOn(getIsoDateTimeString())
-                .withStatus((Status.IN_PROGRESS).toString())
+//                .withAddedOn(getIsoDateTimeString())
+//                .withStatus((Status.IN_PROGRESS).toString())
                 .withbase64images(images)
                 .build();
 

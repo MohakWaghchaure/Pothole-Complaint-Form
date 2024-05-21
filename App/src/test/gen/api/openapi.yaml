@@ -1,0 +1,97 @@
+openapi: 3.0.0
+info:
+  description: This is the API specification which is used for the Serverless Backend
+    Service for the Pothole Complaints Manager
+  title: Pothole Complaints API
+  version: "1.0"
+servers:
+- url: /
+paths:
+  /complaints:
+    get:
+      operationId: getComplaints
+      parameters:
+      - explode: true
+        in: query
+        name: page
+        required: true
+        schema:
+          example: 1
+          type: integer
+        style: form
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                items:
+                  $ref: '#/components/schemas/PotholeComplaint'
+                type: array
+          description: successful operation
+      x-accepts: application/json
+    post:
+      operationId: postComplaint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PotholeComplaint'
+        required: true
+      responses:
+        "201":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PotholeComplaint'
+          description: Complaint created
+        "400":
+          description: Bad request
+        "500":
+          description: Server error
+      x-content-type: application/json
+      x-accepts: application/json
+components:
+  schemas:
+    PotholeComplaint:
+      example:
+        streetName: streetName
+        comments: comments
+        latitude: 0.8008281904610115
+        nearbyLandmark: nearbyLandmark
+        base64Images:
+        - base64Images
+        - base64Images
+        longitude: 6.027456183070403
+        status: status
+      properties:
+        streetName:
+          type: string
+        comments:
+          type: string
+        latitude:
+          format: double
+          type: number
+        longitude:
+          format: double
+          type: number
+        nearbyLandmark:
+          type: string
+        status:
+          type: string
+        base64Images:
+          items:
+            type: string
+          type: array
+      required:
+      - latitude
+      - longitude
+      - streetName
+      type: object
+    Error:
+      properties:
+        code:
+          type: integer
+        message:
+          type: string
+      type: object
+
