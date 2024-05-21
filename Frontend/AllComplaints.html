@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.3.0/luxon.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header>
+        <div class="header-container">
+            <img src="cityLogo.jpeg" alt="City Logo" class="city-logo">
+            <div class="city-name">SMART CITY OF ATLANTIS</div>
+        </div>
+    </header>
+    <title>All Complaints</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<div id="complaintsContainer">
+    <div id="complaintsTable"></div>
+</div>
+<div id="pageSelector"></div>
+<script src="complaints.js"></script>
+</body>
+<button id="mapViewButton" class="all-complaints-link">Map View</button>
+<button id="submitComplaintButton" class="all-complaints-link">Submit a new complaint</button>
+
+<script>
+    document.getElementById('mapViewButton').addEventListener('click', function() {
+        window.location.href = 'complaintsMap.html';
+    });
+
+    document.getElementById('submitComplaintButton').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+</script>
+<footer>
+    <p class="text-center">CREATED BY: <a href="https://www.linkedin.com/in/rutuj-chheda">RUTUJ CHHEDA</a></p>
+</footer>
+</html>

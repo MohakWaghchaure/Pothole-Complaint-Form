@@ -1,0 +1,135 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Pothole Complaints API",
+    "description" : "This is the API specification which is used for the Serverless Backend Service for the Pothole Complaints Manager",
+    "version" : "1.0"
+  },
+  "servers" : [ {
+    "url" : "https://k7uftdyetf.execute-api.us-west-2.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : "v1"
+      }
+    }
+  } ],
+  "paths" : {
+    "/complaints/{page}" : {
+      "get" : {
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "successful operation",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/ArrayOfPotholeComplaint"
+                }
+              }
+            }
+          }
+        }
+      },
+      "options" : {
+        "parameters" : [ {
+          "name" : "page",
+          "in" : "path",
+          "required" : true,
+          "schema" : {
+            "type" : "string"
+          }
+        } ]
+      }
+    },
+    "/complaints" : {
+      "post" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/PotholeComplaint"
+                }
+              }
+            }
+          }
+        }
+      },
+      "options" : {
+        "responses" : {
+          "200" : {
+            "description" : "200 response",
+            "headers" : {
+              "Access-Control-Allow-Origin" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Access-Control-Allow-Methods" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              },
+              "Access-Control-Allow-Headers" : {
+                "schema" : {
+                  "type" : "string"
+                }
+              }
+            },
+            "content" : { }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "ArrayOfPotholeComplaint" : {
+        "type" : "array",
+        "items" : {
+          "$ref" : "#/components/schemas/PotholeComplaint"
+        }
+      },
+      "PotholeComplaint" : {
+        "required" : [ "latitude", "longitude", "streetName" ],
+        "type" : "object",
+        "properties" : {
+          "streetName" : {
+            "type" : "string"
+          },
+          "comments" : {
+            "type" : "string"
+          },
+          "latitude" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "longitude" : {
+            "type" : "number",
+            "format" : "double"
+          },
+          "nearbyLandmark" : {
+            "type" : "string"
+          },
+          "status" : {
+            "type" : "string"
+          },
+          "base64Images" : {
+            "type" : "array",
+            "items" : {
+              "type" : "string"
+            }
+          }
+        }
+      }
+    }
+  }
+}

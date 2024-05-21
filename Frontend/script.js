@@ -85,14 +85,68 @@ function initMap() {
     }
 }
 
+
 document.getElementById('potHoleComplaintForm').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    // Perform necessary actions with the form data, e.g., send it to a server
-    console.log('Street Name:', document.getElementById('streetName').value);
-    console.log('Landmark:', document.getElementById('landmark').value);
-    console.log('Longitude:', document.getElementById('longitude').value);
-    console.log('Latitude:', document.getElementById('latitude').value);
+    // Disable the submit button
+    const submitButton = document.querySelector('#potHoleComplaintForm button[type="submit"]');
+    submitButton.disabled = true;
 
-    alert('Form submitted successfully.');
+    // Gather form data
+    const formData = {
+        streetName: document.getElementById('streetName').value,
+        nearbyLandmark: document.getElementById('landmark').value,
+        longitude: document.getElementById('longitude').value,
+        latitude: document.getElementById('latitude').value,
+        comments: document.getElementById('comments').value
+    };
+
+    function convertImagesToBase64(files) {
+        const promises = Array.from(files).map((file) => {
+            return new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onloadend = function() {
+                    resolve(reader.result);
+                };
+                reader.onerror = function() {
+                    alert('An error occurred while converting the image to base64.');
+                    reject(new Error('An error occurred while converting the image to base64.'));
+                };
+                reader.readAsDataURL(file);
+            });
+        });
+
+        return Promise.all(promises);
+    }
+
+    // Convert uploaded images to base64
+    convertImagesToBase64(document.getElementById('potholePhotographs').files)
+        .then((base64Images) => {
+            // Only add base64Images to formData if it's not empty
+            if (base64Images.length > 0) {
+                formData.base64Images = base64Images;
+            }
+            console.log(formData);
+            // Send POST request to the server
+            return axios.post('https://k7uftdyetf.execute-api.us-west-2.amazonaws.com/v1/complaints', formData);
+        })
+        .then(function(response) {
+            // Handle response
+            console.log(response.data);
+            const complaintId = response.data.potholeComplaint.complaintId;
+            const userId = response.data.potholeComplaint.userId;
+            alert(`Your Complaint was recorded successfully. \n\n For your records, your Complaint ID: ${complaintId} \n\n Your unique User ID is: ${userId} \n\n Please use these IDs to track the status of your complaint. \n\n Thank you for your cooperation. \n`);
+            // Reset the form
+            document.getElementById('potHoleComplaintForm').reset();
+        })
+        .catch(function(error) {
+            // Handle error
+            console.log(error);
+            alert('An error occurred while submitting the form.');
+        })
+        .finally(function() {
+            // Re-enable the submit button
+            submitButton.disabled = false;
+        });
 });

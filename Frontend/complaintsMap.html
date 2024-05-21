@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.3.0/luxon.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <header>
+        <div class="header-container">
+            <img src="cityLogo.jpeg" alt="City Logo" class="city-logo">
+            <div class="city-name">SMART CITY OF ATLANTIS</div>
+        </div>
+    </header>
+    <title>All Complaints</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+<select id="statusSelect">
+    <option value="ALL">All</option>
+    <option value="ACTIVE">Active</option>
+    <option value="PENDING">Pending</option>
+    <option value="COMPLETED">Completed</option>
+</select>
+<div id="mapid" style="height: 600px;"></div>
+
+<script src="complaintsMap.js"></script>
+</body>
+<button id="listViewButton" class="all-complaints-link">List View</button>
+<button id="submitComplaintButton" class="all-complaints-link">Submit a new Complaint</button>
+
+<script>
+    document.getElementById('listViewButton').addEventListener('click', function() {
+        window.location.href = 'complaintsMap.html';
+    });
+
+    document.getElementById('submitComplaintButton').addEventListener('click', function() {
+        window.location.href = 'index.html';
+    });
+</script>
+<footer>
+    <p class="text-center">CREATED BY: <a href="https://www.linkedin.com/in/rutuj-chheda">RUTUJ CHHEDA</a></p>
+</footer>
+</html>

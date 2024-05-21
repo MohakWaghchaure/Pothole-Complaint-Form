@@ -8,8 +8,13 @@
       <excludeFolder url="file://$MODULE_DIR$/../../App/build/distributions" />
       <excludeFolder url="file://$MODULE_DIR$/../../App/build/tmp" />
       <excludeFolder url="file://$MODULE_DIR$/../../App/out" />
+      <excludeFolder url="file://$MODULE_DIR$/../../App/build/jacoco" />
+      <excludeFolder url="file://$MODULE_DIR$/../../App/build/libs" />
+      <excludeFolder url="file://$MODULE_DIR$/../../App/build/reports" />
+      <excludeFolder url="file://$MODULE_DIR$/../../App/build/test-results" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="library" name="axios" level="application" />
   </component>
 </module>

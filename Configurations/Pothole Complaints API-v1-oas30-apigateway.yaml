@@ -1,0 +1,173 @@
+openapi: "3.0.1"
+info:
+  title: "Pothole Complaints API"
+  description: "This is the API specification which is used for the Serverless Backend\
+    \ Service for the Pothole Complaints Manager"
+  version: "1.0"
+servers:
+- url: "https://k7uftdyetf.execute-api.us-west-2.amazonaws.com/{basePath}"
+  variables:
+    basePath:
+      default: "v1"
+paths:
+  /complaints/{page}:
+    get:
+      parameters:
+      - name: "page"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/ArrayOfPotholeComplaint"
+      x-amazon-apigateway-integration:
+        type: "aws"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:905418202313:function:LBC-getPotholeComplaints/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        requestTemplates:
+          application/json: "{\n    \"page\" : \"$input.params(\"page\")\"\n}\n"
+        passthroughBehavior: "when_no_match"
+        contentHandling: "CONVERT_TO_TEXT"
+    options:
+      parameters:
+      - name: "page"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
+      x-amazon-apigateway-integration:
+        type: "mock"
+        responses:
+          default:
+            statusCode: "200"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+  /complaints:
+    post:
+      responses:
+        "200":
+          description: "200 response"
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/PotholeComplaint"
+      x-amazon-apigateway-integration:
+        type: "aws"
+        httpMethod: "POST"
+        uri: "arn:aws:apigateway:us-west-2:lambda:path/2015-03-31/functions/arn:aws:lambda:us-west-2:905418202313:function:LBC-createPotholeComplaint/invocations"
+        responses:
+          default:
+            statusCode: "200"
+        requestTemplates:
+          application/json: "{\n  \"streetName\": $input.json('$.streetName'),\n \
+            \ \"nearbyLandmark\": $input.json('$.nearbyLandmark'),\n  \"longitude\"\
+            : $input.json('$.longitude'),\n  \"latitude\": $input.json('$.latitude'),\n\
+            \  \"comments\": $input.json('$.comments'),\n  \"status\": $input.json('$.status'),\n\
+            \  \"base64Images\": $input.json('$.base64Images')\n}"
+        passthroughBehavior: "when_no_match"
+        contentHandling: "CONVERT_TO_TEXT"
+    options:
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              schema:
+                type: "string"
+            Access-Control-Allow-Methods:
+              schema:
+                type: "string"
+            Access-Control-Allow-Headers:
+              schema:
+                type: "string"
+          content: {}
+      x-amazon-apigateway-integration:
+        type: "mock"
+        responses:
+          default:
+            statusCode: "200"
+            responseParameters:
+              method.response.header.Access-Control-Allow-Methods: "'DELETE,GET,HEAD,OPTIONS,PATCH,POST,PUT'"
+              method.response.header.Access-Control-Allow-Headers: "'Content-Type,Authorization,X-Amz-Date,X-Api-Key,X-Amz-Security-Token'"
+              method.response.header.Access-Control-Allow-Origin: "'*'"
+        requestTemplates:
+          application/json: "{\"statusCode\": 200}"
+        passthroughBehavior: "when_no_match"
+components:
+  schemas:
+    ArrayOfPotholeComplaint:
+      type: "array"
+      items:
+        $ref: "#/components/schemas/PotholeComplaint"
+    PotholeComplaint:
+      required:
+      - "latitude"
+      - "longitude"
+      - "streetName"
+      type: "object"
+      properties:
+        streetName:
+          type: "string"
+        comments:
+          type: "string"
+        latitude:
+          type: "number"
+          format: "double"
+        longitude:
+          type: "number"
+          format: "double"
+        nearbyLandmark:
+          type: "string"
+        status:
+          type: "string"
+        base64Images:
+          type: "array"
+          items:
+            type: "string"
+x-amazon-apigateway-documentation:
+  version: "1.0"
+  createdDate: "2024-05-20T02:25:28Z"
+  documentationParts:
+  - location:
+      type: "API"
+    properties:
+      info:
+        description: "This is the API specification which is used for the Serverless\
+          \ Backend Service for the Pothole Complaints Manager"
+  - location:
+      type: "RESPONSE"
+      path: "/complaints"
+      method: "GET"
+      statusCode: "200"
+    properties:
+      description: "successful operation"
+  - location:
+      type: "RESPONSE"
+      path: "/complaints"
+      method: "POST"
+      statusCode: "201"
+    properties:
+      description: "Complaint created"
+  - location:
+      type: "RESPONSE"
+      path: "/complaints"
+      method: "POST"
+      statusCode: "400"
+    properties:
+      description: "Bad request"
+  - location:
+      type: "RESPONSE"
+      path: "/complaints"
+      method: "POST"
+      statusCode: "500"
+    properties:
+      description: "Server error"

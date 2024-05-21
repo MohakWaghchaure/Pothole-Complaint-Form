@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JavaScriptLibraryMappings">
+    <file url="file://$PROJECT_DIR$" libraries="{axios}" />
+    <file url="file://$PROJECT_DIR$/App" libraries="{axios}" />
+    <file url="file://$PROJECT_DIR$/App/build/generated/source/apt/main" libraries="{axios}" />
+    <file url="file://$PROJECT_DIR$/App/src/generated/java" libraries="{axios}" />
+    <file url="file://$PROJECT_DIR$/App/src/main" libraries="{axios}" />
+    <file url="file://$PROJECT_DIR$/App/src/test" libraries="{axios}" />
+  </component>
+</project>

@@ -1,0 +1,93 @@
+---
+swagger: "2.0"
+info:
+  description: "This is the API specification which is used for the Serverless Backend\
+    \ Service for the Pothole Complaints Manager"
+  version: "1.0"
+  title: "Pothole Complaints API"
+host: "k7uftdyetf.execute-api.us-west-2.amazonaws.com"
+basePath: "/v1"
+schemes:
+- "https"
+paths:
+  /complaints:
+    post:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          schema:
+            $ref: "#/definitions/PotholeComplaint"
+    options:
+      consumes:
+      - "application/json"
+      responses:
+        "200":
+          description: "200 response"
+          headers:
+            Access-Control-Allow-Origin:
+              type: "string"
+            Access-Control-Allow-Methods:
+              type: "string"
+            Access-Control-Allow-Headers:
+              type: "string"
+  /complaints/{page}:
+    get:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "page"
+        in: "path"
+        required: true
+        type: "string"
+      responses:
+        "200":
+          description: "successful operation"
+          schema:
+            $ref: "#/definitions/ArrayOfPotholeComplaint"
+    options:
+      consumes:
+      - "application/json"
+      produces:
+      - "application/json"
+      parameters:
+      - name: "page"
+        in: "path"
+        required: true
+        type: "string"
+      responses: {}
+definitions:
+  ArrayOfPotholeComplaint:
+    type: "array"
+    items:
+      $ref: "#/definitions/PotholeComplaint"
+  PotholeComplaint:
+    type: "object"
+    required:
+    - "latitude"
+    - "longitude"
+    - "streetName"
+    properties:
+      streetName:
+        type: "string"
+      comments:
+        type: "string"
+      latitude:
+        type: "number"
+        format: "double"
+      longitude:
+        type: "number"
+        format: "double"
+      nearbyLandmark:
+        type: "string"
+      status:
+        type: "string"
+      base64Images:
+        type: "array"
+        items:
+          type: "string"
