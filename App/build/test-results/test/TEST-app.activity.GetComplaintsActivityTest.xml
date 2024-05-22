@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="app.activity.GetComplaintsActivityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-21T22:47:03" hostname="RUTUJ-DELL" time="1.09">
+<testsuite name="app.activity.GetComplaintsActivityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2024-05-22T02:23:54" hostname="RUTUJ-DELL" time="1.835">
   <properties/>
-  <testcase name="handleRequest_ListOfComplaintsFound_returnsListOfComplaintsModelInResult()" classname="app.activity.GetComplaintsActivityTest" time="1.09"/>
+  <testcase name="handleRequest_ListOfComplaintsFound_returnsListOfComplaintsModelInResult()" classname="app.activity.GetComplaintsActivityTest" time="1.835"/>
   <system-out><![CDATA[]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
