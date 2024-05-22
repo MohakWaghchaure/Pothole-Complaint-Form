@@ -119,3 +119,5 @@ M
 Prework/Create-Complaint.puml,3\c\3c6208e1376c0778ff8ca294b2175eb5a8a0c988
 K
 Prework/Get-Complaints.puml,3\d\3d728e79127973b091c5eca3d5c09617c573d7a2
+E
+Frontend/package.json,6\1\6114e5d58e7ac41c658986a3f46d4c81d4a4ee7d

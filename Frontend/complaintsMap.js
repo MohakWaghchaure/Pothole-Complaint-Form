@@ -1,9 +1,9 @@
 // Initialize the map and set a default view
-var mymap = L.map('mapid').setView([40.75797506482221, -73.98555994033815], 13);
+var mymap = L.map('mapid').setView([40.75797506482221, -73.98555994033815], 15);
 
 // Add a tile layer to the map and assign it to a variable
 var tileLayer = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    maxZoom: 4,
+    maxZoom: 20,
 }).addTo(mymap);
 
 function parseDate(dateString) {
