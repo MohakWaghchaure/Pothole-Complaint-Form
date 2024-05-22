@@ -1,14 +1,0 @@
-
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(ĞÔªşÿÿÿÿ8¹¿Íéø1J$01fe21d6-95ef-4df8-8ca6-623316a4c6b3
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(óıçÍúÿÿÿÿ8½¿Íéø1J$306bf545-871f-46f4-a15f-c7292c883fa6
-~	java:S125"<This block of commented-out lines of code should be removed.(Â±¾ù8–¥¢¼ù1J$5754eaaf-8cf1-4502-8ea5-f72945b409b7
-m	java:S106 "+Replace this use of System.out by a logger.(ğœÆë8Ï¿Íéø1J$63c1872b-8d58-4ee9-a32d-4f0027f7908b
-ƒ	java:S125"<This block of commented-out lines of code should be removed.(¿„ì¥üÿÿÿÿ8¨å¡¼ù1J$11569601-f9e5-466d-957c-bd422d9a2298
-r	java:S106!"+Replace this use of System.out by a logger.(ƒÇãˆúÿÿÿÿ8Ğ¿Íéø1J$b5b8741a-3d5a-4521-bfd2-56119bb8eae4
-r	java:S1060"+Replace this use of System.out by a logger.(®ÒÕ®üÿÿÿÿ8Ó¿Íéø1J$021b2130-f0be-4e4c-8737-72645f9b9cf3
-m	java:S1064"+Replace this use of System.out by a logger.(âøÚê8Õ¿Íéø1J$99ca6ee0-3654-4136-a307-1f1efd0d5a82
-r	java:S1065"+Replace this use of System.out by a logger.(é±ûÿÿÿÿ8×¿Íéø1J$d3c01589-cb8f-4327-a5a0-30793592bf92
-K
-java:S1128".Remove this unused import 'app.models.Status'.(«ĞùÔ8Šõ¨¼ù1
-_
-java:S1128"BRemove this unused import 'app.util.PotholeComplaintServiceUtils'.(‚ºş€8Šõ¨¼ù1

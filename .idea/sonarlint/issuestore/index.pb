@@ -19,10 +19,6 @@ K
 App/gradlew,0\4\04125752c861395dd55b3bb1eda01fe91baf9be6
 J
 Prework/design_document.md,0\e\0e5cf0df168468c790fdbcc7571fa1352d357ff7
-O
-App/src/main/java/App/Main.java,3\3\331b447e26dd3adfb09dd877816b04f734df93c2
-O
-App/src/main/java/app/Main.java,3\e\3e04690df8f7b77c818bb9f9788918a3aa8c2967
 j
 :App/src/main/java/app/dynamodb/model/PotholeComplaint.java,b\a\ba8b4e66b4fab439145bc060a54ef841f52c4b3d
 g
@@ -81,14 +77,6 @@ j
 :App/src/test/java/app/dependency/ServiceComponentTest.java,2\1\21de4ec69084d388bb76f0bebb991582e4dff7cd
 l
 <App/src/test/java/app/dynamodb/PotholeComplaintDaoTests.java,7\6\762e123e7bda85443ae716f5ace5f15bc81783b6
-r
-BConfigurations/ComplaintsTableCreateActivityTestDataPopulate.ipynb,9\b\9bbbc1987ccab8543508eb7d532b40c3f0bf2f59
-U
-%Configurations/LambdaEventSender.java,1\a\1a1896902057bea667575a0f6dfc24d32add4f9e
-\
-,App/src/main/java/app/LambdaEventSender.java,f\f\ff2d093fdd9c52b9b10894794186bb288a457a31
-m
-=Configurations/ComplaintsTableGetActivityTestDataResult.ipynb,7\6\7669a4c67be5c095e3028e9c0d2a2aa48aa383e2
 t
 DApp/src/test/java/app/exceptions/ComplaintNotFoundExceptionTest.java,7\3\73322317552a0e02394a2a5392ed6d8bc8d6f3f7
 t
@@ -97,8 +85,6 @@ o
 ?App/src/test/java/app/lambda/CreateComplaintsProviderTests.java,c\3\c342fc64054054a2cf7de01765c76697e7f7dc52
 {
 KprototypeTesting/Lambda/ComplaintsTableCreateActivityTestDataPopulate.ipynb,1\d\1d472cc793c2ecd8754a2072c939fcac96bb928e
-X
-(Configurations/potholeComplaintsAPI.yaml,9\0\900d93e7597a4497d8f8be9addca158dec386a41
 Z
 *Configurations/Pothole-Complaints-API.yaml,d\2\d2a56994f753f8be9bf86b6fd97bd08bc4856b04
 Z
