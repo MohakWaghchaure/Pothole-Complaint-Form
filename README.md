@@ -108,4 +108,4 @@ The application can be enhanced in the following ways:
 
 [Video: Demonstration of the project](https://drive.google.com/file/d/1CQ9vha574aP1dlhLyq0c26Pqaa4NMIBj/view?usp=sharing)
 
-### Glad to see you here! 🤩 ![Visitor Count](https://profile-counter.glitch.me/RutujChheda/Pothole-Complaint-Form/count.svg)
+### Glad to see you here! 🤩 ![Visitor Count](https://profile-counter.glitch.me/RutujChheda.Pothole-Complaint-Form/count.svg)
