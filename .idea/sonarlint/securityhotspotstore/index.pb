@@ -107,3 +107,6 @@ K
 Prework/Get-Complaints.puml,3\d\3d728e79127973b091c5eca3d5c09617c573d7a2
 E
 Frontend/package.json,6\1\6114e5d58e7ac41c658986a3f46d4c81d4a4ee7d
+:
+
+.gitignore,a\5\a5cc2925ca8258af241be7e5b0381edf30266302

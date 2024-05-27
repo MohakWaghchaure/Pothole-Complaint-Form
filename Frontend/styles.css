@@ -483,3 +483,23 @@ footer {
     outline: 2px solid var(--primary-color);
     outline-offset: 2px;
 }
+
+.leaflet-popup-content-wrapper {
+    padding: 10px; /* Apply a 10px padding to all sides */
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5px; /* Space between the container edges and the images */
+}
+
+.marker-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 5%;
+    margin: 10px; /* Apply a 10px margin to all sides */
+    object-fit: cover;
+}

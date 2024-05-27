@@ -14,6 +14,9 @@ function parseDate(dateString) {
 }
 
 // Function to fetch and display complaints
+// Function to fetch and display complaints
+// Function to fetch and display complaints
+// Function to fetch and display complaints
 function fetchAndDisplayComplaints(page, status) {
     axios.get(`https://k7uftdyetf.execute-api.us-west-2.amazonaws.com/v1/complaints/${page}`)
         .then(function(response) {
@@ -25,8 +28,19 @@ function fetchAndDisplayComplaints(page, status) {
                 if(status === "ALL" || complaints[i].status === status) {
                     var addedOn = parseDate(complaints[i].addedOn).toLocaleString();
 
+                    var imagesContainer = '<div class="image-container">'; // Create an image container
+                    if(complaints[i].base64image) { // Check if base64image is defined
+                        for(let j = 0; j < complaints[i].base64image.length; j++) {
+                            // Check if the base64 string is correctly formatted
+                            if(complaints[i].base64image[j].startsWith('data:image/jpeg;base64,')) {
+                                imagesContainer += `<img class="marker-image" src="${complaints[i].base64image[j]}">`;
+                            }
+                        }
+                    }
+                    imagesContainer += '</div>'; // Close the image container
+
                     L.marker([complaints[i].latitude, complaints[i].longitude]).addTo(mymap)
-                        .bindPopup(`<b>Street Name: ${complaints[i].streetName}</b><br>Additional Comments: ${complaints[i].comments}<br>Added on: ${addedOn}`);
+                        .bindPopup(`<b>Street Name: ${complaints[i].streetName}</b><br>Additional Comments: ${complaints[i].comments}<br>Added on: ${addedOn}<br>Nearby Landmark: ${complaints[i].nearbyLandmark}<br>${imagesContainer}`);
                 }
             }
 
