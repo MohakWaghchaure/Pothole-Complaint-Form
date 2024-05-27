@@ -489,17 +489,17 @@ footer {
 }
 
 .image-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 5px; /* Space between the container edges and the images */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Create two columns */
+    grid-auto-rows: auto; /* Let the rows size themselves */
+    gap: 10px; /* Space between the images */
+    padding: 10px; /* Space between the container edges and the images */
 }
 
 .marker-image {
     width: 120px;
     height: 120px;
-    border-radius: 5%;
+    border-radius: 2%;
     margin: 10px; /* Apply a 10px margin to all sides */
     object-fit: cover;
 }
