@@ -3,68 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <header>
-        <div class="header-container">
-            <img src="cityLogo.jpeg" alt="City Logo" class="city-logo">
-            <div class="city-name">SMART CITY OF ATLANTIS</div>
-        </div>
-    </header>
     <title>Pothole Complaints</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="scss/style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkDE7bJj6gVDS_MBorCFodGZA0AX9wQXM&callback=initMap" async defer></script>
+    
 </head>
 <body>
-<div class="container mt-5">
-
-    <h2 class="text-center mb-5">POTHOLE COMPLAINT FORM</h2>
-    <div class="button-container">
-        <div class="form-label">Click on the map to automatically update the  location on the form</div>
-        <button type="button" class="btn btn-primary" id="getMyLocation">Get My Location</button>
+    <div class="body-wrapper">
+        <div class="header-wrapper fixed-top">
+            <div class="container header-container">
+                <div class="logo-wrapper">
+                    <img src="images/buildings_light.png" alt="City Logo" class="city-logo">
+                    <div class="city-name"><div class="one">Smart city of</div><div class="two">ATLANTIS</div></div>
+                </div>
+                <div class="nav">
+                    <div class="nav-option"><a href = "./html/AllComplaints.html" class="all-complaints-link">List View</a></div>
+                    <div class="nav-option"><a href = "./html/complaintsMap.html" class="all-complaints-link">Map View</a></div>
+                </div>
+            </div>
+        </div>
+        <div class="page-content-wrapper">
+            <div class="background"></div>
+            <div class="container page-content-container">
+                <h1 class="heading">Pothole Complaint Form</h1>
+                <div class="sub-heading">Click on the map to automatically update the  location on the form</div>
+                <div class="btn-wrapper">
+                    <button type="button" class="btn btn-primary" id="getMyLocation">Get My Location</button>
+                </div>     
+                <div class="map-container">
+                    <div id="map"></div>
+                </div>
+                <div class="form-wrppper">
+                    <div class="form-container">
+                        <form id="potHoleComplaintForm">
+                            <div class="form-group">
+                                <label for="streetName" class="form-label label">Street Name*</label>
+                                <input type="text" class="form-control input-field" id="streetName" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="landmark" class="form-label label">Landmark</label>
+                                <input type="text" class="form-control input-field" id="landmark">
+                            </div>
+                            <div class="form-group">
+                                <label for="longitude" class="form-label label">Longitude*</label>
+                                <input type="text" class="form-control input-field" id="longitude" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="latitude" class="form-label label">Latitude*</label>
+                                <input type="text" class="form-control input-field" id="latitude" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="comments" class="form-label label">Comments</label>
+                                <input type="text" class="form-control input-field" id="comments">
+                            </div>
+                            <div class="form-group">
+                                <label for="potholePhotographs" class="form-label label">Pothole Photographs</label>
+                                <input type="file" multiple="true" class="form-control input-field custom-file-input" id="potholePhotographs" accept="image/*" data-max-files="4" >
+                            </div>
+                            <div class="btn-wrapper">
+                                <button type="submit" class="btn btn-primary">Submit Complaint</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="complain-table-wrapper">
+            <div id="complaintsTable"></div>
+            <!-- <a href = "AllComplaints.html" class="all-complaints-link">Check Complaints in List View</a>
+            <a href = "complaintsMap.html" class="all-complaints-link">Check Complaints in Map View</a> -->
+        </div>
+        <div class="footer-wrapper">
+            <div class="created-by">Created By: <a href="https://www.linkedin.com/in/rutuj-chheda">Rutuj Chheda</a></div>
+        </div>
     </div>
-    <div class="map-container">
-        <div id="map"></div>
-    </div>
-</div>
-<div>
-    <form id="potHoleComplaintForm">
 
-        <div class="mb-3">
-            <label for="streetName" class="form-label">Street Name*</label>
-            <input type="text" class="form-control" id="streetName" required>
-        </div>
-        <div class="mb-3">
-            <label for="landmark" class="form-label">Landmark</label>
-            <input type="text" class="form-control" id="landmark">
-        </div>
-        <div class="mb-3">
-            <label for="longitude" class="form-label">Longitude*</label>
-            <input type="text" class="form-control" id="longitude" required>
-        </div>
-        <div class="mb-3">
-            <label for="latitude" class="form-label">Latitude*</label>
-            <input type="text" class="form-control" id="latitude" required>
-        </div>
-        <div class="mb-3">
-            <label for="comments" class="form-label">Comments</label>
-            <input type="text" class="form-control" id="comments">
-        </div>
-        <div class="mb-3">
-            <label for="potholePhotographs" class="form-label">Pothole Photographs</label>
-            <input type="file" multiple="true" class="form-control custom-file-input" id="potholePhotographs" accept="image/*" data-max-files="4" >
-        </div>
-        <div class="button-container">
-            <button type="submit" class="btn btn-primary">Submit Complaint</button>
-        </div>
-    </form>
-</div>
-
-<div id="complaintsTable"></div>
-<a href = "AllComplaints.html" class="all-complaints-link">Check Complaints in List View</a>
-<a href = "complaintsMap.html" class="all-complaints-link">Check Complaints in Map View</a>
-<footer>
-    <p class="text-center">CREATED BY: <a href="https://www.linkedin.com/in/rutuj-chheda">RUTUJ CHHEDA</a></p>
-</footer>
-<script src="script.js"></script>
+    
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
