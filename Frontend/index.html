@@ -34,52 +34,57 @@
             <div class="background"></div>
             <div class="container page-content-container">
                 <h1 class="heading">Pothole Complaint Form</h1>
-                <div class="sub-heading">Click on the map to automatically update the  location on the form</div>
-                <div class="btn-wrapper">
-                    <button type="button" class="btn btn-primary" id="getMyLocation">Get My Location</button>
-                </div>     
-                <div class="map-container">
-                    <div id="map"></div>
-                </div>
-                <div class="form-wrppper">
-                    <div class="form-container">
-                        <form id="potHoleComplaintForm">
-                            <div class="form-group">
-                                <label for="streetName" class="form-label label">Street Name*</label>
-                                <input type="text" class="form-control input-field" id="streetName" required>
+                <div class="row">
+                    <div class="col-6 form-wrppper">
+                        <div class="form-container">
+                            <form id="potHoleComplaintForm">
+                                <div class="form-group">
+                                    <label for="streetName" class="form-label label">Street Name*</label>
+                                    <input type="text" class="form-control input-field" id="streetName" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="landmark" class="form-label label">Landmark</label>
+                                    <input type="text" class="form-control input-field" id="landmark">
+                                </div>
+                                <div class="form-group">
+                                    <label for="longitude" class="form-label label">Longitude*</label>
+                                    <input type="text" class="form-control input-field" id="longitude" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="latitude" class="form-label label">Latitude*</label>
+                                    <input type="text" class="form-control input-field" id="latitude" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="comments" class="form-label label">Comments</label>
+                                    <input type="text" class="form-control input-field" id="comments">
+                                </div>
+                                <div class="form-group">
+                                    <label for="potholePhotographs" class="form-label label">Pothole Photographs</label>
+                                    <input type="file" multiple="true" class="form-control input-field custom-file-input" id="potholePhotographs" accept="image/*" data-max-files="4" >
+                                </div>
+                                <div class="btn-wrapper complain-btn">
+                                    <button type="submit" class="btn btn-primary">Submit Complaint</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-6 get-location-wrapper">
+                        <div class="btn-wrapper get-location-btn">
+                            <button type="button" class="btn btn-primary" id="getMyLocation">Get My Location</button>
+                        </div>     
+                        <div class="sub-heading">Click on the map to automatically update the  location on the form</div>
+                        <div class="map-wrapper">
+                            <div class="map-container">
+                                <div id="map"></div>
                             </div>
-                            <div class="form-group">
-                                <label for="landmark" class="form-label label">Landmark</label>
-                                <input type="text" class="form-control input-field" id="landmark">
-                            </div>
-                            <div class="form-group">
-                                <label for="longitude" class="form-label label">Longitude*</label>
-                                <input type="text" class="form-control input-field" id="longitude" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="latitude" class="form-label label">Latitude*</label>
-                                <input type="text" class="form-control input-field" id="latitude" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="comments" class="form-label label">Comments</label>
-                                <input type="text" class="form-control input-field" id="comments">
-                            </div>
-                            <div class="form-group">
-                                <label for="potholePhotographs" class="form-label label">Pothole Photographs</label>
-                                <input type="file" multiple="true" class="form-control input-field custom-file-input" id="potholePhotographs" accept="image/*" data-max-files="4" >
-                            </div>
-                            <div class="btn-wrapper">
-                                <button type="submit" class="btn btn-primary">Submit Complaint</button>
-                            </div>
-                        </form>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
         </div>
         <div class="complain-table-wrapper">
             <div id="complaintsTable"></div>
-            <!-- <a href = "AllComplaints.html" class="all-complaints-link">Check Complaints in List View</a>
-            <a href = "complaintsMap.html" class="all-complaints-link">Check Complaints in Map View</a> -->
         </div>
         <div class="footer-wrapper">
             <div class="created-by">Created By: <a href="https://www.linkedin.com/in/rutuj-chheda">Rutuj Chheda</a></div>
